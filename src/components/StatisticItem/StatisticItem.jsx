@@ -4,6 +4,18 @@ import {
   StatisticCounter,
 } from './StatisticItem.styled';
 
-export const StatisticItem = ({ title }) => {
-  return <div>{title && <h2>Hello</h2>} </div>;
+import { IconContext } from 'react-icons';
+
+export const StatisticItem = ({ title, id, total, icon }) => {
+  return (
+    <StatisticBox key={id}>
+      <IconContext.Provider
+        value={{ color: 'blue', size: 20}}
+      >
+        {icon}
+      </IconContext.Provider>
+      <StatisticCounter>{total}</StatisticCounter>
+      <StatisticText>{title}</StatisticText>
+    </StatisticBox>
+  );
 };
