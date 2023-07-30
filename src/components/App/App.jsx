@@ -10,6 +10,8 @@ import {
 
 import data from 'data/data';
 import article from 'data/article';
+import forbesData from 'data/forbes';
+import transactions from 'data/transactions';
 
 export const App = () => {
   return (
@@ -28,12 +30,12 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        <ForbesList />
+        <ForbesList forbesData={forbesData} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        <CryptoHistory />
+        <CryptoHistory transactions={transactions} />
       </Container>
     </Section>
   );
